@@ -1,0 +1,28 @@
+{
+    "welcome": "Welcome to App",
+    "name": "Name",
+    "settings": "Settings",
+    "home": "Home",
+    "more": "More",
+    "appparametrs": "App Parametrs",
+    "applanguage": "Language",
+    "theme": "Theme",
+    "about": "About",
+    "logout": "Log out ?",
+    "az": "Azerbaijani",
+    "en": "English",
+    "ru": "Russian",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "error": "Error",
+    "succesful":"Succesful",
+    "hello":"Hi",
+    "search":"Search",
+    "add":"Add",
+    "rateus":"Rate us",
+    "privacypolicy":"Privacy Policy"
+    
+
+
+}
