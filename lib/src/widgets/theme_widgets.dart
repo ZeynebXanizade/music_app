@@ -13,7 +13,7 @@ class ThemeWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          color: Theme.of(context).colorScheme.secondary,
+          color: Theme.of(context).colorScheme.primary,
         ),
         width: MediaQuery.of(context).size.width * 0.55,
         height: MediaQuery.of(context).size.height * 0.25,

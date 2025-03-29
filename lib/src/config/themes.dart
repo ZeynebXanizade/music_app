@@ -11,14 +11,15 @@ class ThemesApp {
     ),
     highlightColor: transparent,
     splashColor: transparent,
-    colorScheme: ColorScheme.dark(primary: lightBlue, secondary: green),
+    colorScheme: ColorScheme.dark(primary: darkGrey, secondary: green),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(backgroundColor: darkBlue),
     ),
     textTheme: TextTheme(
       labelMedium: TextStyle(color: lightBlue),
-      headlineLarge: TextStyle(color: darkBlue),
+      headlineLarge: TextStyle(color: lightBlue),
       headlineSmall: TextStyle(color: lightBlue),
+      titleMedium: TextStyle(color: secondaryGrey),
     ),
     popupMenuTheme: PopupMenuThemeData(
       color: green,
@@ -37,7 +38,7 @@ class ThemesApp {
     ),
     highlightColor: transparent,
     splashColor: transparent,
-    colorScheme: ColorScheme.light(primary: darkBlue, secondary: green),
+    colorScheme: ColorScheme.light(primary: grey, secondary: green),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(backgroundColor: lightBlue),
     ),
@@ -45,6 +46,7 @@ class ThemesApp {
       labelMedium: TextStyle(color: darkBlue),
       headlineLarge: TextStyle(color: lightBlue),
       headlineSmall: TextStyle(color: darkBlue),
+      titleMedium: TextStyle(color: secondaryGrey),
     ),
     popupMenuTheme: PopupMenuThemeData(
       color: green,

@@ -5,4 +5,5 @@ const Color lightBlue = Color.fromARGB(255, 172, 205, 255);
 const Color green = Color.fromARGB(255, 49, 151, 26);
 const Color transparent = Colors.transparent;
 const Color grey = Color.fromARGB(255, 209, 209, 209);
-const Color darkGrey = Color.fromARGB(255, 68, 66, 66);
+const Color darkGrey = Color.fromARGB(255, 28, 30, 43);
+const Color secondaryGrey = Color.fromARGB(255, 84, 83, 83);
