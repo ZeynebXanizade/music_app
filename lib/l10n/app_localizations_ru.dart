@@ -76,4 +76,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get privacypolicy => 'Kонфиденциальности';
+
+  @override
+  String get famoussongs => 'Известные песни';
 }

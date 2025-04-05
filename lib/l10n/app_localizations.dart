@@ -234,6 +234,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Privacy Policy'**
   String get privacypolicy;
+
+  /// No description provided for @famoussongs.
+  ///
+  /// In en, this message translates to:
+  /// **'Famous Songs'**
+  String get famoussongs;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -76,4 +76,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get privacypolicy => 'Privacy Policy';
+
+  @override
+  String get famoussongs => 'Famous Songs';
 }

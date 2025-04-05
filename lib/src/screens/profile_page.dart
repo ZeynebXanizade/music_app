@@ -54,7 +54,7 @@ class _ProfilePageState extends State<ProfilePage> {
           Icon(icon, color: Theme.of(context).iconTheme.color),
           Padding(
             padding: const EdgeInsets.only(left: 8),
-            child: Text(text, style: Theme.of(context).textTheme.headlineSmall),
+            child: Text(text, style: Theme.of(context).textTheme.titleLarge),
           ),
         ],
       ),

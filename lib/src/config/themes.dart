@@ -11,22 +11,30 @@ class ThemesApp {
     ),
     highlightColor: transparent,
     splashColor: transparent,
-    colorScheme: ColorScheme.dark(primary: darkGrey, secondary: green),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(backgroundColor: darkBlue),
+    colorScheme: ColorScheme.dark(
+      primary: darkGrey,
+      secondary: green,
+      surface: darkBlue,
     ),
+
     textTheme: TextTheme(
       labelMedium: TextStyle(color: lightBlue),
       headlineLarge: TextStyle(color: lightBlue),
       headlineSmall: TextStyle(color: lightBlue),
       titleMedium: TextStyle(color: secondaryGrey),
+      titleLarge: TextStyle(color: secondaryGrey),
     ),
     popupMenuTheme: PopupMenuThemeData(
-      color: green,
+      color: lightBlue,
       textStyle: TextStyle(color: darkBlue),
-      iconColor: green,
+      iconColor: lightBlue,
     ),
-    iconTheme: IconThemeData(color: green),
+    iconTheme: IconThemeData(color: lightBlue),
+
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle: TextStyle(color: lightBlue),
+    ),
+    hintColor: lightBlue,
   );
 
   static ThemeData lightTheme = ThemeData.light().copyWith(
@@ -38,21 +46,28 @@ class ThemesApp {
     ),
     highlightColor: transparent,
     splashColor: transparent,
-    colorScheme: ColorScheme.light(primary: grey, secondary: green),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(backgroundColor: lightBlue),
+    colorScheme: ColorScheme.light(
+      primary: grey,
+      secondary: green,
+      surface: lightBlue,
     ),
+
     textTheme: TextTheme(
       labelMedium: TextStyle(color: darkBlue),
       headlineLarge: TextStyle(color: lightBlue),
       headlineSmall: TextStyle(color: darkBlue),
       titleMedium: TextStyle(color: secondaryGrey),
+      titleLarge: TextStyle(color: secondaryGrey),
     ),
     popupMenuTheme: PopupMenuThemeData(
-      color: green,
+      color: darkBlue,
       textStyle: TextStyle(color: lightBlue),
-      iconColor: green,
+      iconColor: darkBlue,
     ),
-    iconTheme: IconThemeData(color: green),
+    iconTheme: IconThemeData(color: darkBlue),
+    hintColor: darkBlue,
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle: TextStyle(color: darkBlue),
+    ),
   );
 }

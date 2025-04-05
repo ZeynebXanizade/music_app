@@ -76,4 +76,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get privacypolicy => 'Gizlilik Siyasəti';
+
+  @override
+  String get famoussongs => 'Məşhur mahnılar';
 }

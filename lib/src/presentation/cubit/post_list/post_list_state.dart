@@ -12,6 +12,7 @@ class PostListLoaded extends PostListState {
   final bool isPlaying;
   final String currentTrack;
   final String errorMessage;
+  final List<dynamic> searchResults;
 
   PostListLoaded({
     required this.isLoading,
@@ -19,13 +20,16 @@ class PostListLoaded extends PostListState {
     required this.isPlaying,
     required this.currentTrack,
     required this.errorMessage,
+    required this.searchResults,
   });
+
   PostListLoaded copyWith({
     bool? isLoading,
     Map<String, dynamic>? albumData,
     bool? isPlaying,
     String? currentTrack,
     String? errorMessage,
+    List<dynamic>? searchResults,
   }) {
     return PostListLoaded(
       isLoading: isLoading ?? this.isLoading,
@@ -33,6 +37,7 @@ class PostListLoaded extends PostListState {
       isPlaying: isPlaying ?? this.isPlaying,
       currentTrack: currentTrack ?? this.currentTrack,
       errorMessage: errorMessage ?? this.errorMessage,
+      searchResults: searchResults ?? this.searchResults,
     );
   }
 }

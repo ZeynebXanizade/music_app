@@ -39,7 +39,7 @@ class _AppLanguagesState extends State<AppLanguages> {
                           padding: const EdgeInsets.only(left: 8),
                           child: Text(
                             AppLocalizations.of(context).applanguage.toString(),
-                            style: Theme.of(context).textTheme.headlineSmall,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                         ),
                       ],

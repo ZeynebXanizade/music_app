@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:music_app/src/cubit/post_list/post_list_cubit.dart';
+import 'package:music_app/src/presentation/cubit/post_list/post_list_cubit.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class DetailsPage extends StatefulWidget {
@@ -17,7 +17,7 @@ class _HomePageTopCardWidgetsState extends State<DetailsPage> {
   @override
   void initState() {
     super.initState();
-    context.read<PostListCubit>().fetchAlbumDetails();
+    // context.read<PostListCubit>().fetchSongsByCategory(category: 'Pop');
   }
 
   @override

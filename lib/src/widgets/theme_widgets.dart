@@ -8,6 +8,28 @@ class ThemeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
+    final currentTheme = themeNotifier.themeMode;
+
+    Widget buildThemeButton({
+      required String label,
+      required ThemeMode themeMode,
+    }) {
+      final isSelected = currentTheme == themeMode;
+      return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor:
+              isSelected
+                  ? Theme.of(context).colorScheme.secondary
+                  : Theme.of(context).colorScheme.surface,
+        ),
+        onPressed: () {
+          themeNotifier.setThemeMode(themeMode);
+        },
+        child: Text(label, style: Theme.of(context).textTheme.labelMedium),
+      );
+    }
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -23,7 +45,7 @@ class ThemeWidget extends StatelessWidget {
             Transform.rotate(
               angle: 9.40 / 2,
               child: Text(
-                AppLocalizations.of(context).theme.toString(),
+                AppLocalizations.of(context).theme,
                 style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -32,41 +54,17 @@ class ThemeWidget extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    Provider.of<ThemeNotifier>(
-                      context,
-                      listen: false,
-                    ).setThemeMode(ThemeMode.light);
-                  },
-                  child: Text(
-                    AppLocalizations.of(context).light.toString(),
-                    style: Theme.of(context).textTheme.labelMedium,
-                  ),
+                buildThemeButton(
+                  label: AppLocalizations.of(context).light,
+                  themeMode: ThemeMode.light,
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    Provider.of<ThemeNotifier>(
-                      context,
-                      listen: false,
-                    ).setThemeMode(ThemeMode.dark);
-                  },
-                  child: Text(
-                    AppLocalizations.of(context).dark.toString(),
-                    style: Theme.of(context).textTheme.labelMedium,
-                  ),
+                buildThemeButton(
+                  label: AppLocalizations.of(context).dark,
+                  themeMode: ThemeMode.dark,
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    Provider.of<ThemeNotifier>(
-                      context,
-                      listen: false,
-                    ).setThemeMode(ThemeMode.system);
-                  },
-                  child: Text(
-                    AppLocalizations.of(context).system.toString(),
-                    style: Theme.of(context).textTheme.labelMedium,
-                  ),
+                buildThemeButton(
+                  label: AppLocalizations.of(context).system,
+                  themeMode: ThemeMode.system,
                 ),
               ],
             ),

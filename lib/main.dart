@@ -12,7 +12,7 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'src/cubit/post_list/post_list_cubit.dart';
+import 'src/presentation/cubit/post_list/post_list_cubit.dart';
 
 AppLanguage appLanguage = AppLanguage();
 void main() async {
