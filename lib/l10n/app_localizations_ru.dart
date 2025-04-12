@@ -79,4 +79,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get famoussongs => 'Известные песни';
+
+  @override
+  String get favoriteadd => 'Нет добавленных избранных.';
 }

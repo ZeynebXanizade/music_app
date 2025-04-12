@@ -23,7 +23,6 @@ class PostListCubit extends Cubit<PostListState> {
         if (genre != null) {
           final genreId = genre['id'];
 
-          // 🔹 Bütün artistləri çəkirik
           final artistsResponse = await _dio.get(
             'https://api.deezer.com/genre/$genreId/artists',
           );
@@ -35,7 +34,6 @@ class PostListCubit extends Cubit<PostListState> {
             if (artists.isNotEmpty) {
               List<dynamic> allTracks = [];
 
-              // 🔹 Bütün artistlər üçün sorğu göndəririk
               for (var artist in artists) {
                 final artistId = artist['id'];
 
@@ -48,7 +46,7 @@ class PostListCubit extends Cubit<PostListState> {
                   final List<dynamic> tracks =
                       tracksResponse.data['data'] ?? [];
 
-                  allTracks.addAll(tracks); // 🔹 Bütün mahnıları əlavə edirik
+                  allTracks.addAll(tracks);
                 }
               }
 
@@ -60,7 +58,7 @@ class PostListCubit extends Cubit<PostListState> {
                 emit(
                   PostListLoaded(
                     isLoading: false,
-                    albumData: {'tracks': allTracks}, // 🔹 Bütün mahnılar
+                    albumData: {'tracks': allTracks},
                     isPlaying: false,
                     currentTrack: '',
                     errorMessage: '',
@@ -91,7 +89,6 @@ class PostListCubit extends Cubit<PostListState> {
     try {
       emit(PostListLoading());
 
-      /// **Düzgün API URL istifadə edirik**
       final response = await _dio.get('https://api.deezer.com/search?q=$query');
 
       if (response.statusCode == 200 && response.data != null) {
@@ -105,7 +102,7 @@ class PostListCubit extends Cubit<PostListState> {
               isPlaying: false,
               currentTrack: '',
               errorMessage: '',
-              searchResults: tracks, // ✅ Mahnıları list olaraq göndəririk
+              searchResults: tracks,
             ),
           );
         } else {

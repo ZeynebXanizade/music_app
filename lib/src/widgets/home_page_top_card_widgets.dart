@@ -29,12 +29,10 @@ class _HomePageTopCardWidgetsState extends State<HomePageTopCardWidgets> {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              // Trigger the fetch in the background
               context.read<PostListCubit>().fetchSongsByCategory(
                 categories[index],
               );
 
-              // Navigate to the details page immediately
               Navigator.push(
                 context,
                 MaterialPageRoute(

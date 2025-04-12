@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,10 +10,10 @@ import 'package:music_app/src/widgets/bottom_navigation_bar_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'src/presentation/cubit/post_list/post_list_cubit.dart';
 
 AppLanguage appLanguage = AppLanguage();
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   DartPluginRegistrant.ensureInitialized();

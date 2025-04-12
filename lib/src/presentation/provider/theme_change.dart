@@ -8,13 +8,13 @@ class ThemeNotifier with ChangeNotifier {
   ThemeMode get themeMode => _themeMode;
 
   ThemeNotifier() {
-    _loadThemeFromPreferences(); // Load the saved theme mode on initialization
+    _loadThemeFromPreferences();
   }
 
   void setThemeMode(ThemeMode mode) async {
     _themeMode = mode;
     notifyListeners();
-    await _saveThemeToPreferences(mode); // Save the selected theme mode
+    await _saveThemeToPreferences(mode);
   }
 
   Object getTheme() {

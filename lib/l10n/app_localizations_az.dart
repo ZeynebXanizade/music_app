@@ -79,4 +79,7 @@ class AppLocalizationsAz extends AppLocalizations {
 
   @override
   String get famoussongs => 'Məşhur mahnılar';
+
+  @override
+  String get favoriteadd => 'Heç bir favorit əlavə edilməyib.';
 }

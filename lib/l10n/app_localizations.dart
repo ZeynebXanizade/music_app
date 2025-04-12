@@ -240,6 +240,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Famous Songs'**
   String get famoussongs;
+
+  /// No description provided for @favoriteadd.
+  ///
+  /// In en, this message translates to:
+  /// **'No favorite added.'**
+  String get favoriteadd;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

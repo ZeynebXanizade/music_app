@@ -79,4 +79,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get famoussongs => 'Famous Songs';
+
+  @override
+  String get favoriteadd => 'No favorite added.';
 }
